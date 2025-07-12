@@ -1,5 +1,5 @@
 {% set name = "pyDOE3" %}
-{% set version = "1.1.0" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
-  sha256: 3cf359b53b9763ca1b5f4326d8360881e615c77eea01f3b93d9e45b0ab1317c7
+  sha256: 8507228a8a9c562164ac200d8263f0aaecb3b6728863e2c1f3039939482b0706
 
 
 build:
