@@ -13,21 +13,23 @@ source:
 build:
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - hatchling
     - hatch-vcs
 
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - scipy
     - numpy
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pyDOE3
 
