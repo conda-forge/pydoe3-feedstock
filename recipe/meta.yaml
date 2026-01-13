@@ -1,5 +1,5 @@
 {% set name = "pyDOE3" %}
-{% set version = "1.6.1" %}
+{% set version = "1.6.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
-  sha256: 33923da2aa04ce0381a8fe9db678cba0c4b9906290a0c38dbf9cf316845ec98e
+  sha256: ff7377c30e0a2ea8af3f074723488779f557457c8b74029965896c30b8a1a541
 
 
 build:
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
-  number: 1
+  number: 0
 
 requirements:
   host:
